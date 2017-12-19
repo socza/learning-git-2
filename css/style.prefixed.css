@@ -13,12 +13,13 @@ body {
 }
 
 body .first-song {
-  background-color: silver;
+  background-color: black;
   padding: 20px;
 }
 
 body .first-song div {
   display: block;
+  color: red;
   text-align: center;
   background-color: lightblue;
   border: 1px solid #000;
@@ -31,8 +32,6 @@ body .first-song div p {
   text-align: left;
   padding: 10px 0 10px 5px;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  color: blue;
 }
 /*# sourceMappingURL=style.prefixed.css.map */
