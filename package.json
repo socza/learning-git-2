@@ -6,24 +6,20 @@
   "scripts": {
     "test": "npm run test:html",
     "test:html": "nu-html-checker *.html",
-
     "init-project": "npm run init:dirs && npm run init:files && npm run init:gitignore && npm run init:npm-install",
     "init:dirs": "mkdir -p sass css vendor images js libs",
     "init:files": "touch README.md index.html sass/style.scss js/script.js",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "init:npm-install": "npm install",
-
     "build": "npm run build:clean && npm run build:sass && npm run build:autoprefixer && npm run test",
     "build:clean": "rimraf css/*",
     "build:sass": "node-sass --output-style compact -o css sass",
     "build:sass:dev": "node-sass --output-style expanded --source-map true -o css sass",
     "build:autoprefixer": "autoprefixer-cli css/style.css",
-
-    "watch": "parallelshell \"npm run watch:browsersync\" \"npm run watch:sassprefixer \" ",
+    "watch": "parallelshell \"npm run watch:browsersync\" \"npm run watch:sassprefixer\" ",
     "watch:browsersync": "browser-sync start --server --files \"css/*.css\" \"*.html\" ",
-    "watch:sassprefixer": "parallelshell \"npm run watch:sass\" \"npm run watch:autoprefixer\" ",
-    "watch:onchange": "sass/*.scss -d 100 -- npm start",
-    "watch:sass": "node-sass --output-style expanded --source-map true -o css sass",
+    "watch:sassprefixer": "parallelshell \"npm run watch:onchange\" \"npm run watch:autoprefixer\" ",
+    "watch:onchange": "onchange sass/*.scss -d 100 -- node-sass --output-style expanded --source-map true -o css sass",
     "watch:autoprefixer": "autoprefixer-cli -o css/style.prefixed.css css/style.css"
   },
   "repository": {
