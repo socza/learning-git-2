@@ -1,30 +1,38 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .container {
   width: 100%;
   max-width: 400px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 body {
-  margin: 0; }
-  body .first-song {
-    background-color: silver;
-    padding: 20px; }
-    body .first-song div {
-      display: block;
-      text-align: center;
-      background-color: lightblue;
-      border: 1px solid #000;
-      border-radius: 15px;
-      padding: 0 20px;
-      box-shadow: 4px 4px 6px black; }
-      body .first-song div p {
-        text-align: left;
-        padding: 10px 0 10px 5px;
-        margin: 0;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex; }
+  margin: 0;
+}
 
+body .first-song {
+  background-color: silver;
+  padding: 20px;
+}
+
+body .first-song div {
+  display: block;
+  text-align: center;
+  background-color: lightblue;
+  border: 1px solid #000;
+  border-radius: 15px;
+  padding: 0 20px;
+  box-shadow: 4px 4px 6px black;
+}
+
+body .first-song div p {
+  text-align: left;
+  padding: 10px 0 10px 5px;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=style.prefixed.css.map */

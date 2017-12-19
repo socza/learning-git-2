@@ -11,11 +11,12 @@ body {
 	margin: 0;
 
 	.first-song {
-		background-color: silver;
+		background-color: black;
 		padding: 20px;
 
 		div {
 			display: block;
+			color: red;
 			text-align: center;
 			background-color: lightblue;
 			border: 1px solid #000;
@@ -27,7 +28,7 @@ body {
 				text-align: left;
 				padding: 10px 0 10px 5px;
 				margin: 0;
-				display: flex;
+				color: blue;
 			}
 		}
 	}
